@@ -12,7 +12,6 @@
  * this preset require only minimal configuration.
  */
 
-import cssDeclarationSorter from 'css-declaration-sorter';
 import postcssDiscardComments from 'postcss-discard-comments';
 import postcssReduceInitial from 'postcss-reduce-initial';
 import postcssMinifyGradients from 'postcss-minify-gradients';
@@ -49,9 +48,6 @@ const defaultOpts = {
   normalizeCharset: {
     add: false,
   },
-  cssDeclarationSorter: {
-    keepOverrides: true,
-  },
 };
 
 export default function defaultPreset(opts = {}) {
@@ -85,7 +81,6 @@ export default function defaultPreset(opts = {}) {
     [postcssMergeRules, options.mergeRules],
     [postcssDiscardEmpty, options.discardEmpty],
     [postcssUniqueSelectors, options.uniqueSelectors],
-    [cssDeclarationSorter, options.cssDeclarationSorter],
     [rawCache, options.rawCache],
   ];
 
